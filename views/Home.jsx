@@ -8,9 +8,11 @@ class Home extends React.Component {
         <body>
           <h1>Welcome to Pokedex</h1>
           <ul>
-            {this.props.pokemon.map(pokemon => (
+            {this.props.rows.map(pokemon => (
               <li key={pokemon.id}>
-                {pokemon.name}
+                <p>{pokemon.name}</p>
+                <p>{pokemon.num}</p>
+                <img src={pokemon.img}/>
               </li>
             ))}
           </ul>

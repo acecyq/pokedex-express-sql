@@ -9,37 +9,22 @@ class Pokemon extends React.Component {
           <div>
             <ul className="pokemon-list">
               <li className="pokemon-attribute">
-                id: {this.props.pokemon.id}
+                id: {this.props.id}
               </li>
               <li className="pokemon-attribute">
-                num: {this.props.pokemon.num}
+                num: {this.props.num}
               </li>
               <li className="pokemon-attribute">
-                name: {this.props.pokemon.name}
+                name: {this.props.name}
               </li>
               <li className="pokemon-attribute">
-                img: {this.props.pokemon.img}
+                img: <img src={this.props.img}/>
               </li>
               <li className="pokemon-attribute">
-                height: {this.props.pokemon.height}
+                height: {this.props.height}
               </li>
               <li className="pokemon-attribute">
-                weight: {this.props.pokemon.weight}
-              </li>
-              <li className="pokemon-attribute">
-                candy: {this.props.pokemon.candy}
-              </li>
-              <li className="pokemon-attribute">
-                candy_count: {this.props.pokemon.candy_count}
-              </li>
-              <li className="pokemon-attribute">
-                egg: {this.props.pokemon.egg}
-              </li>
-              <li className="pokemon-attribute">
-                avg_spawns: {this.props.pokemon.avg_spawns}
-              </li>
-              <li className="pokemon-attribute">
-                spawn_time: {this.props.pokemon.spawn_time}
+                weight: {this.props.weight}
               </li>
             </ul>
           </div>

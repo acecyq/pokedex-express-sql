@@ -6,86 +6,52 @@ class Edit extends React.Component {
       <html>
         <head />
         <body>
-          <h4>Editing: {this.props.pokemon.name}</h4>
+          <h4>Editing: {this.props.name}</h4>
           <form
             className="pokemon-form"
             method="POST"
-            action={"/pokemons/edit/"+ this.props.pokemon.id + "?_method=PUT"}
+            action={"/" + this.props.id + "?_method=PUT"}
           >
             <div className="pokemon-attribute">
-              id:<input name="id" type="text" defaultValue={this.props.pokemon.id} />
+              id:<input name="id" type="text" defaultValue={this.props.id} />
             </div>
             <div className="pokemon-attribute">
               num:<input
                 name="num"
                 type="text"
-                defaultValue={this.props.pokemon.num}
+                defaultValue={this.props.num}
               />
             </div>
             <div className="pokemon-attribute">
               name:<input
                 name="name"
                 type="text"
-                defaultValue={this.props.pokemon.name}
+                defaultValue={this.props.name}
               />
             </div>
             <div className="pokemon-attribute">
               img:<input
                 name="img"
                 type="text"
-                defaultValue={this.props.pokemon.img}
+                defaultValue={this.props.img}
               />
             </div>
             <div className="pokemon-attribute">
               height:<input
                 name="height"
                 type="text"
-                defaultValue={this.props.pokemon.height}
+                defaultValue={this.props.height}
               />
             </div>
             <div className="pokemon-attribute">
               weight:<input
                 name="weight"
                 type="text"
-                defaultValue={this.props.pokemon.weight}
-              />
-            </div>
-            <div className="pokemon-attribute">
-              candy:<input
-                name="candy"
-                type="text"
-                defaultValue={this.props.pokemon.candy}
-              />
-            </div>
-            <div className="pokemon-attribute">
-              candy_count:<input
-                name="candy_count"
-                type="text"
-                defaultValue={this.props.pokemon.candy_count}
-              />
-            </div>
-            <div className="pokemon-attribute">
-              egg:<input
-                name="egg"
-                type="text"
-                defaultValue={this.props.pokemon.egg}
-              />
-            </div>
-            <div className="pokemon-attribute">
-              avg_spawns:<input
-                name="avg_spawns"
-                type="text"
-                defaultValue={this.props.pokemon.avg_spawns}
-              />
-            </div>
-            <div className="pokemon-attribute">
-              spawn_time:<input
-                name="spawn_time"
-                type="text"
-                defaultValue={this.props.pokemon.spawn_time}
+                defaultValue={this.props.weight}
               />
             </div>
             <input name="submit" type="submit" />
+            <input name="delete" type="submit" value="Delete" formAction={"/" + this.props.id + "?_method=DELETE"} />
           </form>
         </body>
       </html>
